@@ -4,9 +4,9 @@ from django.views import View
 
 class ArticleIndex(View):
 
-    def get(self, request):
+    def get(self, request, tags, article_id):
         return render(
             request,
             'article/index.html',
-            context={'app_name': 'Article-dramaticle'},
+            context={'tags': tags, 'article_id': article_id},
         )
