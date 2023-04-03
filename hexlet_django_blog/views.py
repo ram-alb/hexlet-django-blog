@@ -11,11 +11,6 @@ class IndexView(TemplateView):
         context['who'] = 'world'
         return context
 
-    def get(self, request):
-        url_for_redirect = reverse('article', kwargs={'tags': 'python', 'article_id': 100})
-        return redirect(url_for_redirect)
-
-
 
 def about(request):
     return render(request, 'about.html')
